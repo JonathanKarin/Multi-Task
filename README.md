@@ -58,22 +58,22 @@ Unzip the files to 'Data' folder.
 ## Prepare Data
 
 ```sh
-python generate_data.py
+python in_vitro/generate_data.py
 ```
 ## Train and Test
 ```sh
-python train_and_test.py
+python in_vitro/train_and_test.py
 ```
 The results will be saved as res.csv, the model would be saved in h5 format (model_41_9.h5).
 
 ## In vivo
 For achieving the best results in predicting in vivo binding, train the model with input vector size of 75 nucleotides.
 ```sh
-python train_75.py
+python in_vivo/train_75.py
 ```
 download the in vivo data from #### ,unzip the files to 'Data' folder.
 ```sh
-python test_in_vivo.py
+python in_vivo/test_in_vivo.py
 ```
 
 
