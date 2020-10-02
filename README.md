@@ -81,7 +81,7 @@ python test_in_vivo.py
 <!-- CONTACT -->
 ## Contact
 
-Dr. Yaron Orenstein - yaronore [at] bgu.ac.il
+Dr. Yaron Orenstein - yaronore [at] bgu.ac.il <br />
 Jonathan Karin - karinjo [at ] post.bgu.ac.il
 
 
