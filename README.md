@@ -24,6 +24,7 @@ Multi-Task net is a deep learning model for predicting protein-RNA binding inter
   * [Bring Data](#Bring-Data)
   * [Prepare Data](#Prepare-Data)
   * [Train and Test](#Train-and-Test)
+  * [In vivo](#In vivo)
 * [Usage](#usage)
 * [Contact](#contact)
 
@@ -51,7 +52,7 @@ cd Multi-Task
 
 ## Bring Data
 Download the normalize RNACompete data in this  [Link](http://hugheslab.ccbr.utoronto.ca/supplementary-data/RNAcompete_eukarya/norm_data.txt.gz) from [RNAcompete](http://hugheslab.ccbr.utoronto.ca/supplementary-data/RNAcompete_eukarya/) site .
-Download the secondary structure data from this [Link](https://drive.google.com/file/d/1jdDiR9LyWplZ7oFuccav9HlPngged9aH/view?usp=sharing).
+Download the secondary structure data from this [Link](https://drive.google.com/file/d/1jdDiR9LyWplZ7oFuccav9HlPngged9aH/view?usp=sharing).<br />
 Unzip the files to 'Data' folder.
 
 ## Prepare Data
@@ -65,11 +66,16 @@ python train_and_test.py
 ```
 The results will be saved as res.csv, the model would be saved in h5 format (model_41_9.h5).
 
-## in vivo
+## In vivo
 For achieving the best results in predicting in vivo binding, train the model with input vector size of 75 nucleotides.
 ```sh
 python train_75.py
 ```
+download the in vivo data from #### ,unzip the files to 'Data' folder.
+```sh
+python test_in_vivo.py
+```
+
 
 
 <!-- CONTACT -->
