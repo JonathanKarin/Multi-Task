@@ -21,7 +21,7 @@ Multi-Task net is a deep learning model for predicting protein-RNA binding inter
 * [About the Project](#about-the-project)
   * [Built With](#built-with)
 * [Getting Started](#getting-started)
-  * [Bring the train and test data- in vitro](#Bring Data)
+  * [Bring the train and test data- in vitro](#Bring-Data)
   * [Installation](#installation)
 * [Usage](#usage)
 * [Contact](#contact)
