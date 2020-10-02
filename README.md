@@ -21,8 +21,9 @@ Multi-Task net is a deep learning model for predicting protein-RNA binding inter
 * [About the Project](#about-the-project)
   * [Built With](#built-with)
 * [Getting Started](#getting-started)
-  * [Bring the train and test data- in vitro](#Bring-Data)
-  * [Installation](#installation)
+  * [Bring Data](#Bring-Data)
+  * [Prepare Data](#Prepare-Data)
+  * [Train and Test](#Train-and-Test)
 * [Usage](#usage)
 * [Contact](#contact)
 
@@ -48,7 +49,7 @@ git clone https://github.com/JonathanKarin/Multi-Task/
 cd Multi-Task
 ```
 
-## Bring the train and test data- in vitro
+## Bring Data
 Download the normalize RNACompete data in this  [Link](http://hugheslab.ccbr.utoronto.ca/supplementary-data/RNAcompete_eukarya/norm_data.txt.gz) from [RNAcompete](http://hugheslab.ccbr.utoronto.ca/supplementary-data/RNAcompete_eukarya/) site .
 Download the secondary structure data from this [Link](https://drive.google.com/file/d/1jdDiR9LyWplZ7oFuccav9HlPngged9aH/view?usp=sharing).
 Unzip the files to 'Data' folder.
