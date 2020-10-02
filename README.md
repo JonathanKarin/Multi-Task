@@ -65,6 +65,12 @@ python train_and_test.py
 ```
 The results will be saved as res.csv, the model would be saved in h5 format (model_41_9.h5).
 
+## in vivo
+For achieving the best results in predicting in vivo binding, train the model with input vector size of 75 nucleotides.
+```sh
+python train_75.py
+```
+
 
 <!-- CONTACT -->
 ## Contact
