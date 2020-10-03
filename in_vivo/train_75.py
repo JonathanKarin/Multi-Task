@@ -1,5 +1,5 @@
-from ..common import one_hot
-from ..common import prepare_data
+from common import one_hot
+from common import prepare_data
 import numpy as np
 import pandas as pd
 from keras.models import Sequential, Model

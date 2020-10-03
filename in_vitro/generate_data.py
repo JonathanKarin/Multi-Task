@@ -1,4 +1,4 @@
-from ..common import prepare_data
+from common import prepare_data
 
 
 def main():
