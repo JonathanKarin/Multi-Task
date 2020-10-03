@@ -1,4 +1,4 @@
-from one_hot import *
+from .one_hot import *
 import numpy as np
 from collections import Counter
 import pandas as pd

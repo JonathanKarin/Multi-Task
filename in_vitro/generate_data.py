@@ -1,9 +1,9 @@
-from ../common/prepare_data import *
+from ..common import prepare_data
 
 
 def main():
-    save_data_41()
-    save_data_target()
+    prepare_data.save_data_41()
+    prepare_data.save_data_target()
 
 if __name__ == "__main__":
     main()

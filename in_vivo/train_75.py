@@ -1,5 +1,5 @@
-from one_hot import *
-from prepare_data import *
+from ..common import one_hot
+from ..common import prepare_data
 import numpy as np
 import pandas as pd
 from keras.models import Sequential, Model
@@ -12,7 +12,7 @@ from keras.regularizers import l2
 
 def main():
     print("main 4")
-    x_train, x_test, y_train, y_test, number_of_SETB, list_of_nans, colums4 , params_dict = get_data75()
+    x_train, x_test, y_train, y_test, number_of_SETB, list_of_nans, colums4 , params_dict = prepare_data.get_data75()
     X = Input(shape=(75, 4))
     conv_kernel_long = Conv1D(params_dict["filters_long"], kernel_size=params_dict["filters_long_length"], activation='relu', use_bias=True,
                               kernel_regularizer=l2(params_dict["regu"]))(X)  # Long kernel - its purpose is to identify structure preferences
