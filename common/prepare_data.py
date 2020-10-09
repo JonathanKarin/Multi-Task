@@ -489,7 +489,6 @@ def save_data_41():
         i = i + 1
     i = 0
     for index, row in Test.iterrows():
-        print(str(i))
         x_shaped_b[i, :, 0:4] = one_hot_encode_(row[0])  # encode_me(seq)
         seq = row[0]
         ans = np.zeros((41, 5))
