@@ -32,7 +32,7 @@ Multi-Task net is a deep learning model for predicting protein-RNA binding inter
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-..
+Deep learning-based method to predict RNA-binding intensity ofhundreds of proteins to a given RNA sequence with better accuracy than extant methods.
 
 ### Built With
 * [Python](https://www.python.org/) - 3.7 , Numpy and pandas libraries. 
@@ -71,7 +71,16 @@ For achieving the best results in predicting in vivo binding, train the model wi
 ```sh
 python in_vivo/train_75.py
 ```
-download the in vivo data from #### ,unzip the files to 'Data' folder.
+download the in vivo data:<br />
+[Link](https://drive.google.com/file/d/1jdDiR9LyWplZ7oFuccav9HlPngged9aH/view?usp=sharing)
+[Link](https://drive.google.com/file/d/18Y2x4b2A-obJjMwbuhLUsAQwA1_2pOXS/view?usp=sharing)
+unzip the files to 'eclip' folder.
+```sh
+mkdir in_vivo/eclip/
+unzip eCLIP_bed_control_ext_fa.zip -d in_vivo/eclip/
+unzip eCLIP_bed_ext_fa.zip -d in_vivo/eclip/
+```
+Run the model
 ```sh
 python in_vivo/test_in_vivo.py
 ```
