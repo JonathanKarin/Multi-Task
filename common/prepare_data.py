@@ -615,3 +615,64 @@ def get_data75():
 
     return x_shaped_a, x_shaped_b, y_shaped_a, y_shaped_b, 121031, list_of_nans, colums4 ,params_dict
 
+
+def read_eclip_75(path_pos, path_neg):
+    pos_list = []
+    pos_list_struct = []
+    f_pos = open(path_pos)
+    for line in f_pos:
+        if "N" in line:
+            continue
+        if (line[0] == '>'):
+            continue
+        elif ((line[0] == 't') | (line[0] == 'a') | (line[0] == 'c') | (line[0] == 'g') | (line[0] == 'u') | (line[0] == 'T') | (line[0] == 'A') | (line[0] == 'C') | (line[0] == 'G') | (line[0] == 'U')):
+            seq=re.sub('\n', '', line)
+            seq=seq.replace('T','U')
+            seq=seq.replace('t','U')
+            seq = seq.replace('u', 'U')
+            seq = seq.replace('a', 'A')
+            seq = seq.replace('c', 'C')
+            seq = seq.replace('g', 'G')
+            skip= int(len(seq)/2 -38)
+            seq=seq[skip:skip+75]
+            pos_list.append(seq)
+        else:
+            print(line)
+            print("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
+            print("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
+    neg_list = []
+    f_neg = open(path_neg)
+    i = 0
+    for line in f_neg:
+        if "N" in line:
+            continue
+        if (line[0] == '>'):
+            continue
+        elif ((line[0] == 't') | (line[0] == 'a') | (line[0] == 'c') | (line[0] == 'g') | (line[0] == 'u') | (line[0] == 'T') | (line[0] == 'A') | (line[0] == 'C') | (line[0] == 'G') | (line[0] == 'U')):
+            seq=re.sub('\n', '', line)
+            seq=seq.replace('T','U')
+            seq=seq.replace('t','U')
+            seq = seq.replace('u', 'U')
+            seq = seq.replace('a', 'A')
+            seq = seq.replace('c', 'C')
+            seq = seq.replace('g', 'G')
+            skip= int(len(seq)/2 -38)
+            seq=seq[skip:skip+75]
+            neg_list.append(seq)
+        else:
+            print(line)
+            print("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
+            print("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
+
+    x = np.zeros((len(neg_list) + len(pos_list), 75, 4))
+    y = np.zeros((len(neg_list) + len(pos_list)))
+    i = 0
+    for line in pos_list:
+        x[i] = one_hot_encode_75(line)
+        y[i] = 1
+        i = i + 1
+
+    for line in neg_list:
+        x[i] = one_hot_encode_75(line)
+        i = i + 1
+    return x, y

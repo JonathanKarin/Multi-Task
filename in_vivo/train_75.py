@@ -69,7 +69,7 @@ def main():
     print("Max:" + str(max(list_of_res)))
     print("Min:" + str(min(list_of_res)))
     print(str(nan_num) + " Is the number of nan's value")
-    model_func.save("model_41_9.h5")
+    model_func.save("model_75_4.h5")
     pd.DataFrame(list_of_res).to_csv("res.csv")
 
 
